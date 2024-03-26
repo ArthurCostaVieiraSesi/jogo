@@ -5,7 +5,12 @@
              Shell.NavBarIsVisible="false">
 
     <Grid>
-        <Image="cenario.jpeg">
+        <Image Source="cenario.jpg"
+               Margin="0"
+               Aspect="AspectFill"/>
+
+        <Image Source="folha.png"
+               Margin="0,300,0,0"/>
 
 
     </Grid>
