@@ -66,10 +66,32 @@
                
 
         <Image Source="folha.png"
-               Margin="0,300,0,0"/>
+               Margin="0,300,0,0"
+               x:Name="Leafeon"/>
+
+       <ImageButton Source="feliz.png"
+                      Margin="0,0,270,205"
+                      HeightRequest="55"
+                      WidthRequest="55"
+                      CornerRadius="30"/>
+
+       <ImageButton Source="comida.png"
+                      Margin="0,0,270,85"
+                      HeightRequest="65"
+                      WidthRequest="65"
+                      CornerRadius="30"/>
+
+       <ImageButton Source="agua.png"
+                      Margin="0,30,270,0"
+                      HeightRequest="70"
+                      WidthRequest="70"
+                      CornerRadius="30"/>
 
        <ImageButton Source="pokebola.png"
-                      Margin="150"/>
+                      Margin="270,0,0,200"
+                      HeightRequest="65"
+                      WidthRequest="65"
+                      CornerRadius="30"/>
 
 
     </Grid>
