@@ -4,8 +4,9 @@ public class Squirtle : Pai
 {
     public Squirtle()
     {
-        fome = 0;
-        sede = 0;
-        alegria = 0;
+        arquivo = "tortuguita.png";
+        fome = 0.5;
+        sede = 0.5;
+        alegria = 0.5;
     }
 }

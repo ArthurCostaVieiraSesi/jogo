@@ -2,19 +2,24 @@ namespace jogo;
 
 public class Pai
 {
-    protected int fome;
-    protected int sede;
-    protected int alegria;
-    public int arquivo;
+    protected double fome;
+    protected double sede;
+    protected double alegria;
+    protected string arquivo;
+
+    public string GetArquivo()
+    {
+        return arquivo;
+    }
 
     public Pai()
     {
-        fome = 0;
-        sede = 0;
-        alegria = 0;
+        fome = 0.1;
+        sede = 0.1;
+        alegria = 0.1;
     }
 
-    public void SetFome(int f)
+    public void SetFome(double f)
     {
         if (f <= 1 || f >= 0)
          fome = f;
@@ -24,12 +29,12 @@ public class Pai
          fome = 0;
     }
 
-    public int GetFome()
+    public double GetFome()
     {
         return fome;
     }
 
-        public void SetSede(int s)
+        public void SetSede(double s)
     {
         if (s <= 1 || s >= 0)
          sede = s;
@@ -39,12 +44,12 @@ public class Pai
          sede = 0;
     }
 
-    public int GetSede()
+    public double GetSede()
     {
         return sede;
     }
 
-        public void SetAlegria(int a)
+        public void SetAlegria(double a)
     {
         if (a <= 1 || a >= 0)
          alegria = a;
@@ -54,7 +59,7 @@ public class Pai
          alegria = 0;
     }
 
-    public int GetAlegria()
+    public double GetAlegria()
     {
         return alegria;
     }

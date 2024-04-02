@@ -2,10 +2,12 @@ namespace jogo;
 
 public class Leafeon : Pai
 {
+
     public Leafeon()
     {
-        fome = 0;
-        sede = 0;
-        alegria = 0;
+        arquivo = "folha.png";
+        fome = 0.5;
+        sede = 0.5;
+        alegria = 0.5;
     }
 }

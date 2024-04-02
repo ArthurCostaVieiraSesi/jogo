@@ -67,28 +67,32 @@
 
         <Image Source="folha.png"
                Margin="0,300,0,0"
-               x:Name="Leafeon"/>
+               x:Name="imgPersonagem"/>
 
        <ImageButton Source="feliz.png"
                       Margin="0,0,270,205"
+                      Clicked="Feliz"
                       HeightRequest="55"
                       WidthRequest="55"
                       CornerRadius="30"/>
 
        <ImageButton Source="comida.png"
                       Margin="0,0,270,85"
+                      Clicked="Comida"
                       HeightRequest="65"
                       WidthRequest="65"
                       CornerRadius="30"/>
 
        <ImageButton Source="agua.png"
                       Margin="0,30,270,0"
+                      Clicked="Agua"
                       HeightRequest="70"
                       WidthRequest="70"
                       CornerRadius="30"/>
 
        <ImageButton Source="pokebola.png"
                       Margin="270,0,0,200"
+                      Clicked="Proximo"
                       HeightRequest="65"
                       WidthRequest="65"
                       CornerRadius="30"/>

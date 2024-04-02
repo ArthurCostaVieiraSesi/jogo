@@ -4,8 +4,9 @@ public class Gastly : Pai
 {
     public Gastly()
     {
-        fome = 0;
-        sede = 0;
-        alegria = 0;
+        arquivo = "emo.png";
+        fome = 0.5;
+        sede = 0.5;
+        alegria = 0.5;
     }
 }
