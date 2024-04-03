@@ -21,7 +21,7 @@ public class Pai
 
     public void SetFome(double f)
     {
-        if (f <= 1 || f >= 0)
+        if (f <= 1 && f >= 0)
          fome = f;
         else if (f > 1)
          fome = 1;
@@ -36,7 +36,7 @@ public class Pai
 
         public void SetSede(double s)
     {
-        if (s <= 1 || s >= 0)
+        if (s <= 1 && s >= 0)
          sede = s;
         else if (s > 1)
          sede = 1;
@@ -51,7 +51,7 @@ public class Pai
 
         public void SetAlegria(double a)
     {
-        if (a <= 1 || a >= 0)
+        if (a <= 1 && a >= 0)
          alegria = a;
         else if (a > 1)
          alegria = 1;

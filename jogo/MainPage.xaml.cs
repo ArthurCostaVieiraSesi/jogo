@@ -13,6 +13,10 @@ public partial class MainPage : ContentPage
 		gastly = new Gastly();
 		atual = leafeon;
 		imgPersonagem.Source = atual.GetArquivo();
+		var timer = Application.Current.Dispatcher.CreateTimer();
+    timer.Interval = TimeSpan.FromSeconds(3);
+    timer.Tick += (s,e) => PassouTempo();
+    timer.Start();
 	}
 
 	void Proximo(object sender,EventArgs args)
@@ -23,7 +27,10 @@ public partial class MainPage : ContentPage
 			atual = gastly;
 		else if (atual == gastly)
 			atual = leafeon;
-		imgPersonagem.Source=atual.GetArquivo();
+		imgPersonagem.Source = atual.GetArquivo();
+		Felicidade.Progress = atual.GetAlegria();
+		Fome.Progress = atual.GetFome();
+		Sede.Progress = atual.GetSede();
 	}
 
 	void Feliz(object sender,EventArgs args)
@@ -40,8 +47,18 @@ public partial class MainPage : ContentPage
 
 	void Agua(object sender,EventArgs args)
 	{
-		atual.SetSede(atual.GetFome()+0.1);
+		atual.SetSede(atual.GetSede()+0.1);
 		Sede.Progress = atual.GetSede();
+	}
+
+	void PassouTempo()
+	{
+		atual.SetFome(atual.GetFome()-0.1);
+		Fome.Progress = atual.GetFome();
+		atual.SetSede(atual.GetSede()-0.1);
+		Sede.Progress = atual.GetSede();
+		atual.SetAlegria(atual.GetAlegria()-0.1);
+		Felicidade.Progress = atual.GetAlegria();
 	}
 
 }
