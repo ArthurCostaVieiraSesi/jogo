@@ -26,7 +26,10 @@ public class Pai
         else if (f > 1)
          fome = 1;
         else
-         fome = 0;
+        {
+            fome = 0;
+            Application.Current.MainPage=new GameOver();
+        }
     }
 
     public double GetFome()
@@ -41,7 +44,10 @@ public class Pai
         else if (s > 1)
          sede = 1;
         else
-         sede = 0;
+        {
+            sede = 0;
+            Application.Current.MainPage=new GameOver();
+        }
     }
 
     public double GetSede()
@@ -56,7 +62,10 @@ public class Pai
         else if (a > 1)
          alegria = 1;
         else
-         alegria = 0;
+        {
+            alegria = 0;
+            Application.Current.MainPage=new GameOver();
+        }
     }
 
     public double GetAlegria()

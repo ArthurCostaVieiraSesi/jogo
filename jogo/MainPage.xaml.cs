@@ -4,6 +4,7 @@ public partial class MainPage : ContentPage
 {
 
 	Leafeon leafeon; Squirtle squirtle; Gastly gastly; Pai atual;
+IDispatcherTimer timer;
 
 	public MainPage()
 	{
@@ -13,7 +14,7 @@ public partial class MainPage : ContentPage
 		gastly = new Gastly();
 		atual = leafeon;
 		imgPersonagem.Source = atual.GetArquivo();
-		var timer = Application.Current.Dispatcher.CreateTimer();
+		timer = Application.Current.Dispatcher.CreateTimer();
     timer.Interval = TimeSpan.FromSeconds(3);
     timer.Tick += (s,e) => PassouTempo();
     timer.Start();
@@ -54,10 +55,16 @@ public partial class MainPage : ContentPage
 	void PassouTempo()
 	{
 		atual.SetFome(atual.GetFome()-0.1);
+		if(atual.GetFome()<=0)
+			timer.Stop();
 		Fome.Progress = atual.GetFome();
 		atual.SetSede(atual.GetSede()-0.1);
+		if(atual.GetSede()<=0)
+			timer.Stop();
 		Sede.Progress = atual.GetSede();
 		atual.SetAlegria(atual.GetAlegria()-0.1);
+		if(atual.GetAlegria()<=0)
+			timer.Stop();
 		Felicidade.Progress = atual.GetAlegria();
 	}
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jogo.GameOver"
+             Shell.NavBarIsVisible="false"
+             BackgroundColor="#1c243c">
+
+    <Grid>
+
+    <Image Source="gayover.jpg"
+        Margin="0,0,0,200"/>
+
+    <Button Text="Tentar novamente"
+        Clicked="tenta"
+        Margin="10,475,10,150"/>
+
+    </Grid>
+
+</ContentPage>
